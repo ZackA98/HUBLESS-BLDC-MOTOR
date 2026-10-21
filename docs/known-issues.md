@@ -1,0 +1,22 @@
+# Known Issues — SATOR V1 Onshape Document
+
+> Recorded from a view-only inventory on 2026-10-20. Fixes happen in Onshape (Zack's account); this list is the checklist.
+
+| # | Issue | Where | Impact |
+|---|---|---|---|
+| 1 | Mate **Revolute 1** shows a red error (missing/failed reference) | Scooter Assembly | Assembly may not solve/update correctly; fix or suppress deliberately |
+| 2 | Most top-level instances are named **Part 1 / Part 2** | Scooter Assembly | BOM and documentation cannot identify parts |
+| 3 | BOM **Part number** and **Description** columns are completely blank (14 rows) | Scooter Assembly BOM | Repo BOM had to be rebuilt from tab names — see `bom/bom-draft.csv` |
+| 4 | Duplicate tabs: Rear Left Motor Mount **Copy 1 / Copy 2**, Motor Assembly **Copy 1**, Part Studio 1 copies | Body&Motor Mounts / Motor Parts / Misc | Unclear which version is authoritative; archive or delete copies |
+| 5 | Superseded iterations still sit beside current parts (Foot Rest V1/V2, Front Motor Mount V1) | Body&Motor Mounts | Risk of exporting/using the wrong version |
+| 6 | No materials, mass properties, or dimensions recorded in part properties | All Part Studios | Structural analysis (DWG-M-001) must use labeled assumptions until set |
+| 7 | Electrical system is not modelled or specified (no battery, ESC, wiring in CAD) | — | Wiring diagram DWG-E-001 is PROPOSED, not as-built |
+
+## Suggested cleanup order in Onshape
+
+1. Fix Revolute 1
+2. Rename instances/parts descriptively
+3. Fill in BOM part numbers/descriptions (or accept the repo BOM as the record)
+4. Archive superseded/copy tabs into an "Archive" folder
+5. Assign materials so mass properties become real
+6. Export STEP (Scooter Assembly + Motor Assembly) and renders for this repo
