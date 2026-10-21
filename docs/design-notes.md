@@ -14,6 +14,23 @@ Stand-up electric scooter with **hubless BLDC motors in both wheels**. Removing 
 - **Modelled purchased parts:** 5 mm ball bearings, 6" × 1/8" × 5/16" magnets, copper coil (stator winding representation)
 - **Mates (top assembly):** 8 mates — 6 Fastened, 2 Revolute
 
+## Motor Assembly internals (verified 2026-10-20)
+
+Each Motor Assembly contains exactly **5 part instances and no mates at all** — parts are positioned but unconstrained:
+
+| Part | Qty per motor | Measured |
+|---|---|---|
+| Stator | 1 | Volume 100.692 in³ |
+| Rotor | 1 | OD 8.200 in, volume 71.569 in³ |
+| Rotor plate | 2 (front + back disc) | Center hole Ø 5.200 in, volume 10.985 in³ each |
+| Tire | 1 | OD 12.700 in, volume 410.767 in³ |
+
+Key findings:
+
+- **No material is assigned to any part**, so Onshape cannot compute mass — the mass-properties dialog warns and leaves Mass blank.
+- The **RotorMagnetInsert studio exists but is NOT instanced** in Motor Assembly, and **no bearings appear in the assembly at all** — as modelled, the main Motor Assembly has neither magnets nor a bearing/roller arrangement.
+- **Motor Assembly Copy 1 differs significantly**: 9 instances including two circular patterns — one with **34 small rectangular blocks** arranged in a ring (visually consistent with magnets). Copy 1 looks like a later/alternate iteration that was never merged back into the main assembly. Which one is authoritative is a design decision for Zack.
+
 ## Electrical (PROPOSED — see drawings/DWG-E-001)
 
 - Dual sensored BLDC drive, one ESC per motor, common battery bus and throttle signal — ASSUMED architecture
@@ -28,5 +45,5 @@ Stand-up electric scooter with **hubless BLDC motors in both wheels**. Removing 
 
 1. Are both motors driven, or is one a design placeholder carried over by copying the assembly?
 2. What ESC and battery are intended? Nothing electrical is modelled except the copper coil.
-3. What is the intended roller/bearing arrangement inside the Motor Assembly — quantities are still TBD in the BOM.
+3. What is the intended roller/bearing arrangement? Verified 2026-10-20: the main Motor Assembly contains **no bearings and no magnets at all** — only Stator, Rotor, 2× Rotor plate, Tire, with zero mates. The magnet pattern (34 blocks) exists only in Motor Assembly Copy 1. Decide which assembly is the real design, then merge the magnet/bearing content into it.
 4. Steering: how does the front Motor Assembly mount handle steering pivot loads (front mounts + steering mount tab exists)?
