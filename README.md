@@ -1,48 +1,54 @@
-# [Project Name]
+# SATOR V1 — Hubless BLDC Electric Scooter
 
-[One or two sentence summary of what this project is and what problem it solves.]
+> **Status: DRAFT SHOWCASE — assembled 2026-10-20 from the Onshape inventory. Specs marked ASSUMED / TBD are not yet verified.**
 
-![Board photo or final build](images/hero-shot.jpg)
+A stand-up electric scooter built around **two hubless BLDC wheel motors** (front and rear), designed in Onshape by Zackary Aebersold, Mechanical Engineering student at Sacramento City College.
 
-**Demo:** [▶ Watch on YouTube](https://youtube.com/your-video-link) &nbsp;·&nbsp; ![demo gif](images/demo.gif)
-
----
+![Static load forces drawing](drawings/static-load-forces.svg)
 
 ## Overview
 
-[2–4 sentences: what it does, your role, the timeframe, and who it was built for — e.g. class project, club, competition.]
+The SATOR V1 replaces a conventional hub motor with a hubless (rim-drive) layout: the stator is fixed to the chassis through side motor mounts, the rotor is integrated into the wheel/tire ring, and the open-centre wheel is located by guide rollers/bearings. The result is a wheel with a large open bore, driven at its rim.
 
-## Hardware / Design
+- **CAD source of truth:** Onshape document "SATOR V1" (Scooter Assembly)
+- **This repo:** public engineering showcase — exports, drawings, BOM, and documentation
 
-| | |
+## Design / Assembly Structure
+
+| Group | Contents |
 |---|---|
-| **MCU/Platform** | [e.g. STM32F4] |
-| **PCB Tool** | [e.g. KiCad] |
-| **Key Components** | [sensors, actuators, etc.] |
+| Scooter Assembly (top) | Chassis/deck, stem + steering, shock fork, 2× Motor Assembly |
+| Motor Parts | Motor Assembly, Stator, Rotor, RotorMagnetInsert, Rotor plate, Tire |
+| Body & Motor Mounts | Base Plate, Stem, Chassis, Foot Rest V3, front/rear motor mounts |
+| Purchased / modelled parts | 5 mm ball bearings, 6" × 1/8" × 5/16" magnets, copper coil (winding) |
 
-![PCB top layer](images/pcb-top.png)
-![PCB bottom layer](images/pcb-bottom.png)
+## Drawings
 
-## What I Built
-
-- [Bullet describing a specific design decision — e.g. "Designed the power delivery network for stable 3.3V under motor-driver switching noise"]
-- [Bullet describing a challenge and how you solved it]
-- [Bullet describing validation/testing method — oscilloscope, logic analyzer, etc.]
+| Drawing | File | Status |
+|---|---|---|
+| DWG-E-001 Wiring Diagram (dual motor) | [drawings/wiring-diagram.svg](drawings/wiring-diagram.svg) | Proposed — not as-built |
+| DWG-M-001 Static Load Forces (single-wheel worst case, 883 N) | [drawings/static-load-forces.svg](drawings/static-load-forces.svg) | Draft analysis |
 
 ## Repo Contents
 
 ```
-/hardware      → schematics, PCB layout files (KiCad/Altium)
-/cad           → mechanical CAD (STEP, STL)
-/firmware      → source code (if applicable)
-/docs          → datasheets, test reports
-/images        → photos, renders, GIFs used in this README
+/cad        → STEP exports from Onshape (to be added)
+/drawings   → engineering drawings (SVG, PDF on release)
+/images     → renders and build photos (to be added)
+/docs       → design notes and showcase plan
+/bom        → bill of materials (draft)
 ```
 
-## Fabrication Files
+## Known Issues (from Onshape, 2026-10-20)
 
-📦 [Download Gerbers + BOM](../../releases) — packaged as a GitHub Release so anyone can fab their own board.
+- Mate **Revolute 1** in Scooter Assembly shows an error (missing/failed reference)
+- Most parts in the top assembly still carry generic names (Part 1 / Part 2)
+- Onshape BOM part numbers/descriptions are blank — see `bom/bom-draft.csv`
+- Foot Rest V1/V2 and Motor Mount V1 tabs are superseded iterations
 
-## Lessons Learned
+## Lessons / Next Steps
 
-[Optional: 1–2 sentences on what you'd do differently next time — this is a strong signal to reviewers that you reflect critically on your work.]
+- Fix Revolute 1 mate and name all instances in Onshape
+- Export STEP of Scooter Assembly + Motor Assembly, add renders/exploded view
+- Confirm electrical parts (battery, ESCs) and replace ASSUMED values in DWG-E-001
+- Measure rider weight distribution front/rear and update DWG-M-001

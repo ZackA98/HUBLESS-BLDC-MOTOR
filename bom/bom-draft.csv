@@ -1,0 +1,17 @@
+item,qty,part,source_tab,status,notes
+1,2,Motor Assembly,Motor Parts / Motor Assembly,Onshape - named,Front and rear instances in Scooter Assembly
+2,1,Stator,Motor Parts / Stator,Onshape - named,Per motor - quantity to confirm (likely 2 total)
+3,1,Rotor,Motor Parts / Rotor,Onshape - named,Per motor - quantity to confirm
+4,1,Rotor Magnet Insert,Motor Parts / RotorMagnetInsert,Onshape - named,Per motor - quantity to confirm
+5,1,Rotor Plate,Motor Parts / Rotor plate,Onshape - named,Per motor - quantity to confirm
+6,1,Tire,Motor Parts / Tire,Onshape - named,Per wheel - quantity to confirm
+7,1,Chassis,Motor Parts folder: Body&Motor Mounts / Chassis,Onshape - named,Battery deck / main structure
+8,1,Base Plate,Body&Motor Mounts / Base Plate,Onshape - named,
+9,1,Stem,Body&Motor Mounts / Stem,Onshape - named,Steering stem
+10,1,Foot Rest (V3 latest),Body&Motor Mounts / Foot Rest V1-V3,Onshape - named,V1 and V2 are earlier iterations - archive only
+11,2,Motor Mounts (front pair),Body&Motor Mounts / Front Left+Right Motor Mount V2,Onshape - named,V1 superseded by V2
+12,2,Motor Mounts (rear pair),Body&Motor Mounts / Rear Left+Right Motor Mount,Onshape - named,Duplicate 'Copy' tabs need cleanup/confirmation in Onshape
+13,TBD,Ball Bearing 5mm,Misc / 5mm Ball Bearing,Onshape - named,Quantity from assembly instance count - to extract
+14,TBD,Magnet 6in x 1/8in x 5/16in,Misc / Magnet,Onshape - named,Rotor magnet - count per rotor to extract
+15,TBD,Copper Coil (winding),Misc / Copper Coil,Onshape - named,Stator winding representation
+,,,,,"DRAFT BOM built from Onshape tab inventory 2026-10-20. Onshape BOM part numbers/descriptions were blank. Quantities marked TBD must be verified from Motor Assembly internals before this is final."

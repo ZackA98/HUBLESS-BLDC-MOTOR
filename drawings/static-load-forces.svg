@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <marker id="arrR" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#cc0000"/></marker>
+    <marker id="arrB" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="#2266cc"/></marker>
+    <marker id="arrK" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L9,3 L0,6 Z" fill="black"/></marker>
+  </defs>
+  <rect x="10" y="10" width="1180" height="830" fill="white" stroke="black" stroke-width="2"/>
+  <text x="40" y="55" font-size="28" font-weight="bold">SATOR V1 — HUBLESS WHEEL STATIC LOAD FORCES</text>
+  <text x="40" y="82" font-size="15" fill="#b00000" font-weight="bold">DRAFT ANALYSIS DIAGRAM — SINGLE-WHEEL WORST CASE. ASSUMPTIONS LABELED; NOT A CERTIFIED STRUCTURAL CALCULATION.</text>
+
+  <!-- Ground -->
+  <line x1="120" y1="640" x2="620" y2="640" stroke="black" stroke-width="3"/>
+  <g stroke="black" stroke-width="1.5">
+    <line x1="140" y1="640" x2="120" y2="660"/><line x1="190" y1="640" x2="170" y2="660"/>
+    <line x1="240" y1="640" x2="220" y2="660"/><line x1="290" y1="640" x2="270" y2="660"/>
+    <line x1="340" y1="640" x2="320" y2="660"/><line x1="390" y1="640" x2="370" y2="660"/>
+    <line x1="440" y1="640" x2="420" y2="660"/><line x1="490" y1="640" x2="470" y2="660"/>
+    <line x1="540" y1="640" x2="520" y2="660"/><line x1="590" y1="640" x2="570" y2="660"/>
+  </g>
+  <text x="130" y="685" font-size="13">GROUND — CONTACT PATCH</text>
+
+  <!-- Wheel (hubless ring) -->
+  <circle cx="370" cy="390" r="250" fill="none" stroke="black" stroke-width="10"/>
+  <circle cx="370" cy="390" r="168" fill="none" stroke="black" stroke-width="3"/>
+  <circle cx="370" cy="390" r="120" fill="#f2f2f2" stroke="black" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="312" y="398" font-size="14" font-weight="bold">STATOR</text>
+  <text x="285" y="420" font-size="12">(fixed to mounts, open centre)</text>
+  <text x="120" y="150" font-size="13" font-weight="bold">ROTOR / TIRE RING →</text>
+
+  <!-- Applied load W down through stator/mounts -->
+  <line x1="370" y1="120" x2="370" y2="255" stroke="#cc0000" stroke-width="5" marker-end="url(#arrR)"/>
+  <text x="435" y="150" font-size="17" fill="#cc0000" font-weight="bold">W = 883 N (down)</text>
+  <text x="435" y="173" font-size="12" fill="#cc0000">Applied load via motor mounts / stator</text>
+
+  <!-- Ground reaction up -->
+  <line x1="370" y1="760" x2="370" y2="655" stroke="#2266cc" stroke-width="5" marker-end="url(#arrB)"/>
+  <text x="385" y="720" font-size="17" fill="#2266cc" font-weight="bold">R = 883 N (up)</text>
+  <text x="385" y="742" font-size="12" fill="#2266cc">Ground reaction at contact patch</text>
+
+  <!-- Roller reactions (qualitative) -->
+  <line x1="370" y1="270" x2="370" y2="205" stroke="black" stroke-width="3" marker-end="url(#arrK)"/>
+  <line x1="255" y1="500" x2="205" y2="545" stroke="black" stroke-width="3" marker-end="url(#arrK)"/>
+  <line x1="485" y1="500" x2="535" y2="545" stroke="black" stroke-width="3" marker-end="url(#arrK)"/>
+  <circle cx="370" cy="268" r="14" fill="white" stroke="black" stroke-width="2.5"/>
+  <circle cx="253" cy="502" r="14" fill="white" stroke="black" stroke-width="2.5"/>
+  <circle cx="487" cy="502" r="14" fill="white" stroke="black" stroke-width="2.5"/>
+  <text x="455" y="200" font-size="13">Guide roller / bearing</text>
+  <text x="455" y="218" font-size="13">reactions R1, R2, R3</text>
+  <text x="40" y="730" font-size="12">Note: roller load-sharing is qualitative only —</text>
+  <text x="40" y="750" font-size="12">exact split needs measured geometry + stiffness.</text>
+  
+
+  <!-- Equations box -->
+  <rect x="700" y="140" width="440" height="295" fill="#fbfbfb" stroke="black" stroke-width="1.5"/>
+  <text x="720" y="170" font-size="16" font-weight="bold">STATIC EQUILIBRIUM (WHEEL FBD)</text>
+  <text x="720" y="205" font-size="14">Assumed total load: 90 kg × 9.81 m/s² = 883 N</text>
+  <text x="720" y="232" font-size="14">Worst case: 100% of load on ONE wheel</text>
+  <text x="720" y="259" font-size="14">(normal riding: split front/rear, TBD by</text>
+  <text x="720" y="279" font-size="14">wheelbase + rider position — not yet measured)</text>
+  <text x="720" y="315" font-size="15">ΣFy = 0  →  R − W = 0  →  R = 883 N</text>
+  <text x="720" y="345" font-size="15">ΣFx = 0  →  no horizontal force (static, level)</text>
+  <text x="720" y="375" font-size="15">ΣM = 0  →  satisfied: W and R are collinear</text>
+  <text x="720" y="400" font-size="13" fill="#b00000">Dynamic / impact factor NOT included. Do not size</text>
+  <text x="735" y="418" font-size="13" fill="#b00000">parts from this draft alone.</text>
+
+  <!-- Load path box -->
+  <rect x="700" y="465" width="440" height="150" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="720" y="493" font-size="15" font-weight="bold">LOAD PATH</text>
+  <text x="720" y="520" font-size="13">Rider → deck/chassis → motor mounts → stator →</text>
+  <text x="720" y="542" font-size="13">guide rollers / bearings → rotor + tire ring →</text>
+  <text x="720" y="564" font-size="13">contact patch → ground</text>
+  <text x="720" y="593" font-size="13">Source geometry: Onshape “SATOR V1”, Scooter Assembly</text>
+
+  <!-- Title block -->
+  <rect x="700" y="720" width="460" height="100" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="700" y1="755" x2="1160" y2="755" stroke="black"/>
+  <line x1="700" y1="788" x2="1160" y2="788" stroke="black"/>
+  <line x1="1030" y1="720" x2="1030" y2="820" stroke="black"/>
+  <text x="715" y="745" font-size="13">PROJECT: SATOR V1 — HUBLESS BLDC</text>
+  <text x="715" y="778" font-size="13">DRAWING: DWG-M-001  STATIC LOADS</text>
+  <text x="1045" y="778" font-size="13">REV: A (DRAFT)</text>
+  <text x="715" y="810" font-size="13">DATE: 2026-10-20</text>
+  <text x="1045" y="810" font-size="13">SCALE: NTS</text>
+</svg>
