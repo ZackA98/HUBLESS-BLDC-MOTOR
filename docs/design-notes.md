@@ -29,7 +29,7 @@ Key findings:
 
 - **No material is assigned to any part**, so Onshape cannot compute mass — the mass-properties dialog warns and leaves Mass blank.
 - The **RotorMagnetInsert studio exists but is NOT instanced** in Motor Assembly, and **no bearings appear in the assembly at all** — as modelled, the main Motor Assembly has neither magnets nor a bearing/roller arrangement.
-- **Motor Assembly Copy 1 differs significantly**: 9 instances including two circular patterns — one with **34 small rectangular blocks** arranged in a ring (visually consistent with magnets). Copy 1 looks like a later/alternate iteration that was never merged back into the main assembly. Which one is authoritative is a design decision for Zack.
+- **Motor Assembly Copy 1 differs significantly**: 9 instances and two circular patterns, verified 2026-10-21 via each instance's "Switch to \<studio\>" context menu (which names its source Part Studio). **"Circular pattern 1" is 35 copper coils** (seed instance Part 1 \<6\>), sourced from the "Copper Coil" studio — the earlier note describing these blocks as magnets was a misidentification. **"Circular pattern 2" is 49 magnets**, thin bars sourced from the "6 in x 1/8 in x 5/16 Magnet" studio (RotorMagnetInsert was ruled out as the pattern source). Also present: a standalone magnet-like bar (Part 1 \<42\>, source unconfirmed in view-only mode) and a Rotor plate instance (Part 1 \<2\>) that is suppressed in Copy 1 but active in the main assembly. Copy 1 looks like a later/alternate iteration that was never merged back into the main assembly. Which one is authoritative is a design decision for Zack.
 
 ## Electrical (PROPOSED — see drawings/DWG-E-001)
 
@@ -45,5 +45,5 @@ Key findings:
 
 1. Are both motors driven, or is one a design placeholder carried over by copying the assembly?
 2. What ESC and battery are intended? Nothing electrical is modelled except the copper coil.
-3. What is the intended roller/bearing arrangement? Verified 2026-10-20: the main Motor Assembly contains **no bearings and no magnets at all** — only Stator, Rotor, 2× Rotor plate, Tire, with zero mates. The magnet pattern (34 blocks) exists only in Motor Assembly Copy 1. Decide which assembly is the real design, then merge the magnet/bearing content into it.
+3. What is the intended roller/bearing arrangement? Verified 2026-10-20: the main Motor Assembly contains **no bearings and no magnets at all** — only Stator, Rotor, 2× Rotor plate, Tire, with zero mates. Verified 2026-10-21: Motor Assembly Copy 1 contains 49 magnet instances (from the "6 in x 1/8 in x 5/16 Magnet" studio) and 35 copper coil instances, plus one suppressed Rotor plate. Decide which assembly is the real design, then merge the magnet/bearing content into it.
 4. Steering: how does the front Motor Assembly mount handle steering pivot loads (front mounts + steering mount tab exists)?
