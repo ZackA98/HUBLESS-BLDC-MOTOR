@@ -1,17 +1,17 @@
-item,qty,part,source_tab,status,notes
-1,2,Motor Assembly,Motor Parts / Motor Assembly,Onshape - verified,Front and rear instances in Scooter Assembly. Assembly tree fully expanded 2026-10-20: 5 instances, all literally named Part 1 with occurrence numbers <1>-<5>; Mate features (0).
-2,2,Tire,Motor Parts / Motor Assembly,Onshape - verified,"1 per motor. BOM Item 1 of Motor Assembly (Part 1 <5>); identified by 3D highlight as the tire."
-3,2,Stator,Motor Parts / Motor Assembly,Onshape - verified,"1 per motor. BOM Item 4 of Motor Assembly (Part 1 <4>); silver slotted cylinder, ~51 teeth/slots (visual estimate, Circular pattern 1 feature). No separate copper winding parts exist."
-4,0,Rotor (not instantiated),Motor Parts / Rotor,Onshape - verified,"The Rotor part studio exists (11 features) but is NOT instantiated in the Motor Assembly; also shows a red feature error on Extrude 4. 0 in assembly as designed."
-5,2,Rotor Magnet Insert,Motor Parts / Motor Assembly,Onshape - verified,"1 per motor. BOM Item 2 of Motor Assembly (Part 1 <1>); thin ring carrying ~46 rectangular magnet blocks around its outer circumference (visual estimate; no pattern feature)."
-6,4,Rotor Plate,Motor Parts / Motor Assembly,Onshape - verified,"2 per motor (one per wheel side). BOM Item 3 of Motor Assembly (Part 1 <3> + Part 1 <2>); gray annular disc with bolt holes, matched to Rotor plate part studio."
-7,1,Chassis,Motor Parts folder: Body&Motor Mounts / Chassis,Onshape - named,Battery deck / main structure
+item,qty_total,part,source_tab,status,notes
+1,2,Motor Assembly,Motor Parts / Motor Assembly,Verified - Onshape 2026-10-20,Front and rear instances in Scooter Assembly. Each Motor Assembly: 5 instances and NO mates. Instance mapping confirmed by 'Switch to' source-studio menus AND volume fingerprints (re-verified 2026-10-20 after a conflicting inventory was corrected)
+2,2,Stator,Motor Parts / Stator,Verified per Motor Assembly,Instance Part 1 <1>. 1 per motor x 2 motors. Volume 100.692 in3. No material assigned in Onshape
+3,2,Rotor,Motor Parts / Rotor,Verified per Motor Assembly,Instance Part 1 <5>. 1 per motor x 2 motors. Outer diameter 8.200 in; volume 71.569 in3. NOTE: Rotor studio has a red feature error on Extrude 4 (part still computes). No material assigned
+4,0,Rotor Magnet Insert,Motor Parts / RotorMagnetInsert,NOT in Motor Assembly,Studio exists (thin ring with many small magnet blocks) but has NO instance in Motor Assembly - confirmed by 'Switch to' menus on all 5 instances. Motor Assembly Copy 1 separately has a circular pattern of 34 small blocks - likely magnets; which assembly is authoritative is TBD
+5,4,Rotor Plate,Motor Parts / Rotor plate,Verified per Motor Assembly,Instances Part 1 <2> and <3>. 2 per motor (front + back disc) x 2 motors. Center hole diameter 5.200 in; volume 10.985 in3 each. No material assigned
+6,2,Tire,Motor Parts / Tire,Verified per Motor Assembly,Instance Part 1 <4>. 1 per motor x 2 motors. Outer diameter 12.700 in; volume 410.767 in3. No material assigned
+7,1,Chassis,Body&Motor Mounts / Chassis,Onshape - named,Battery deck / main structure
 8,1,Base Plate,Body&Motor Mounts / Base Plate,Onshape - named,
 9,1,Stem,Body&Motor Mounts / Stem,Onshape - named,Steering stem
 10,1,Foot Rest (V3 latest),Body&Motor Mounts / Foot Rest V1-V3,Onshape - named,V1 and V2 are earlier iterations - archive only
 11,2,Motor Mounts (front pair),Body&Motor Mounts / Front Left+Right Motor Mount V2,Onshape - named,V1 superseded by V2
 12,2,Motor Mounts (rear pair),Body&Motor Mounts / Rear Left+Right Motor Mount,Onshape - named,Duplicate 'Copy' tabs need cleanup/confirmation in Onshape
-13,TBD,Ball Bearing 5mm,Misc / 5mm Ball Bearing,Onshape - named,Not present in Motor Assembly (verified 2026-10-20); quantity for the full Scooter Assembly still TBD
-14,0,Magnet 6in x 1/8in x 5/16in (separate part),Misc / Magnet,Onshape - verified,No separate magnet parts in the Motor Assembly (verified 2026-10-20); magnet blocks are modeled into the RotorMagnetInsert ring (~46 per motor)
-15,0,Copper Coil (separate winding part),Misc / Copper Coil,Onshape - verified,No separate winding parts in the Motor Assembly (verified 2026-10-20); windings represented only by the slotted stator core geometry
-,,,,,"DRAFT BOM built from Onshape tab inventory 2026-10-20. Motor Assembly internals verified from the Onshape Motor Assembly instance tree + flattened BOM 2026-10-20 (Tire/Stator/Inserts/Plates per motor; Rotor not instantiated). Onshape BOM part numbers/descriptions were blank. Item counts marked TBD still need the full Scooter Assembly instance check."
+13,0,Ball Bearing 5mm,Misc / 5mm Ball Bearing,NOT in Motor Assembly,Studio exists in Misc but no bearing parts appear in Motor Assembly. Intended location/quantity still TBD - open design question
+14,TBD,Magnet 6in x 1/8in x 5/16in,Misc / Magnet,Unverified,Not instanced in Motor Assembly as a separate part. Magnet content exists only in the un-instanced RotorMagnetInsert studio and in Copy 1's 34-block pattern (unconfirmed)
+15,0,Copper Coil (winding),Misc / Copper Coil,NOT in Motor Assembly,Studio exists (stator winding representation) but is not instanced in the assembly
+,,,,,"DRAFT BOM. Top-level quantities from Onshape tab inventory 2026-10-20; Motor Assembly internals verified and re-verified 2026-10-20 (5 instances: Stator x1, Rotor x1, Rotor Plate x2, Tire x1; no mates; no materials assigned so no mass data). Onshape BOM part numbers/descriptions were blank."
