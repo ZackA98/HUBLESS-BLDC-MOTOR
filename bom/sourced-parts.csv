@@ -1,0 +1,17 @@
+item,qty,part,specification,status,notes
+1,98,Permanent magnets (49 per motor x 2),6 in x 1/8 in x 5/16 in bar stock - grade TBD (N42/N52 typical),Copy 1 count VERIFIED - spec TBD,Count from Motor Assembly Copy 1 pattern 2 (2026-10-21); grade from purchase history - Zack to confirm
+2,70,Copper coil windings (35 per motor x 2),Magnet wire - AWG and turns per coil TBD,Copy 1 count VERIFIED - spec TBD,Count from Copy 1 pattern 1 (2026-10-21). Odd counts: see docs/decisions/ADR-004 (49 magnets is an odd pole count - open design question)
+3,TBD,Ball bearings / guide rollers,5 mm ball bearing studio exists in CAD,ASSUMED - arrangement TBD,Not modelled in main Motor Assembly - see ADR-002. Quantity depends on roller arrangement (typ. 3-6 per wheel in hubless designs - ASSUMED)
+4,2,ESC / motor controller,Sensored BLDC - model TBD,ASSUMED (per DWG-E-001),Must match final battery voltage and motor current - selection is ADR-003
+5,1,Battery pack,48 V nominal 13S Li-ion + BMS - capacity TBD,ASSUMED (per DWG-E-001),Cells + BMS + nickel strip + enclosure; pack sits in chassis deck box
+6,1,Main fuse + holder,40 A,ASSUMED (per DWG-E-001),Size to final wiring/ESC - see docs/safety.md
+7,1,Power switch / anti-spark loop key,XT90-S anti-spark or loop key - TBD,ASSUMED,Per DWG-E-001 disconnect requirement
+8,1,Throttle,Hall-effect twist/thumb - TBD,ASSUMED,Signal splits to both ESCs (dual drive assumed)
+9,1,E-brake lever with cut-off switch,Standard e-brake lever,TBD,Cut-off to both ESCs - unconfirmed in CAD; required before powered tests (safety.md)
+10,1,Display / speedometer,UART display matched to ESC - TBD,Optional - TBD,Only if the chosen ESC supports it
+11,TBD,Phase wire (U/V/W x2 motors),Silicone wire ~12 AWG - TBD,ASSUMED,Length from deck to front/rear motors via chassis
+12,TBD,Hall sensor cable,5-wire (5V/GND/H1/H2/H3) per motor,ASSUMED,Pinout in docs/electrical-pinout.md - VERIFY against actual ESC/motor before power-up
+13,TBD,Connectors,Bullet connectors for phases; JST for Hall - TBD,ASSUMED,Match ESC/motor leads
+14,TBD,Fasteners - motor mounts & rotor plates,Size/grade TBD from CAD hardware pass,TBD,Rotor plate bolt pattern exists in CAD; fastener spec not recorded yet
+15,TBD,Charge port + charger,Matched to final pack voltage,TBD,Balance charger per safety.md
+,,,,,"SOURCED-PARTS BOM (companion to bom-draft.csv, which covers CAD parts). Counts marked VERIFIED come from the Onshape inventories of 2026-10-20/21. Everything else is TBD/ASSUMED pending Zack's part selections (ADR-003)."

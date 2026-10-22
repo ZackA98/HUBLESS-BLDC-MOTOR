@@ -27,16 +27,37 @@ The SATOR V1 replaces a conventional hub motor with a hubless (rim-drive) layout
 | Drawing | File | Status |
 |---|---|---|
 | DWG-E-001 Wiring Diagram (dual motor) | [drawings/wiring-diagram.svg](drawings/wiring-diagram.svg) | Proposed — not as-built |
+| DWG-E-002 System Block Diagram | [drawings/system-block-diagram.svg](drawings/system-block-diagram.svg) | Proposed — not as-built |
 | DWG-M-001 Static Load Forces (single-wheel worst case, 883 N) | [drawings/static-load-forces.svg](drawings/static-load-forces.svg) | Draft analysis |
+
+## Documentation
+
+| Doc | What's in it |
+|---|---|
+| [docs/specifications.md](docs/specifications.md) | Spec table — VERIFIED values vs ASSUMED/TBD, kept separate |
+| [docs/design-notes.md](docs/design-notes.md) | Design concept, verified Motor Assembly + Copy 1 inventories |
+| [docs/calculations.md](docs/calculations.md) | Wheel geometry, speed-vs-RPM table, static load summary |
+| [docs/assembly-guide.md](docs/assembly-guide.md) | Assembly sequence (draft, from CAD structure) |
+| [docs/testing-plan.md](docs/testing-plan.md) | Planned bench / structural / vehicle test programme |
+| [docs/safety.md](docs/safety.md) | Battery, electrical, structural, and shop safety notes |
+| [docs/roadmap.md](docs/roadmap.md) | Project status, open decisions, CAD cleanup checklist |
+| [docs/known-issues.md](docs/known-issues.md) | Known Onshape defects (Revolute 1, Rotor Extrude 4, …) |
+| [docs/electrical-pinout.md](docs/electrical-pinout.md) | Proposed connector pinouts + wire schedule for DWG-E-001 |
+| [docs/cost-estimate.md](docs/cost-estimate.md) | Build budget estimate (all values labelled ESTIMATE) |
+| [docs/decisions/](docs/decisions/) | Decision records: authoritative assembly, bearings, electrical parts, pole/slot question |
+| [bom/sourced-parts.csv](bom/sourced-parts.csv) | Purchased/COTS parts list (companion to the CAD BOM) |
+| [tests/test-log-template.md](tests/test-log-template.md) | Test log with the B/S/V test IDs from the testing plan |
+| [CHANGELOG.md](CHANGELOG.md) | Repo change history |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to help — and the rule: never present an assumption as a measurement |
 
 ## Repo Contents
 
 ```
-/cad        → STEP exports from Onshape (to be added)
+/cad        → STEP exports from Onshape (export checklist in cad/README.md)
 /drawings   → engineering drawings (SVG, PDF on release)
-/images     → renders and build photos (to be added)
-/docs       → design notes and showcase plan
-/bom        → bill of materials (draft)
+/images     → renders and build photos (wishlist in images/README.md)
+/docs       → specifications, design notes, calculations, guides
+/bom        → bill of materials (verified against Onshape, 2026-10-20/21)
 ```
 
 ## Known Issues (from Onshape, 2026-10-20)
