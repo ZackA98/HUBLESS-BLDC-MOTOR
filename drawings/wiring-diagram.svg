@@ -1,0 +1,106 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="850" viewBox="0 0 1200 850" font-family="Arial, Helvetica, sans-serif">
+  <rect x="10" y="10" width="1180" height="830" fill="white" stroke="black" stroke-width="2"/>
+  <text x="40" y="55" font-size="28" font-weight="bold">SATOR V1 — DUAL HUBLESS BLDC WIRING DIAGRAM</text>
+  <text x="40" y="82" font-size="15" fill="#b00000" font-weight="bold">STATUS: PROPOSED / DRAFT — NOT AS-BUILT. ALL PART VALUES ARE LABELED ASSUMPTIONS, VERIFY BEFORE ENERGIZING.</text>
+
+  <!-- Battery -->
+  <rect x="40" y="180" width="200" height="120" fill="#fff7cc" stroke="black" stroke-width="2"/>
+  <text x="60" y="215" font-size="18" font-weight="bold">BATTERY PACK</text>
+  <text x="60" y="242" font-size="14">48 V nominal (ASSUMED)</text>
+  <text x="60" y="264" font-size="14">13S Li-ion, in chassis deck</text>
+  <text x="60" y="286" font-size="14">Capacity: TBD</text>
+
+  <!-- Fuse -->
+  <rect x="300" y="205" width="120" height="70" fill="white" stroke="black" stroke-width="2"/>
+  <text x="322" y="235" font-size="16" font-weight="bold">MAIN FUSE</text>
+  <text x="322" y="256" font-size="12">40 A (ASSUMED)</text>
+
+  <!-- Switch -->
+  <rect x="480" y="205" width="140" height="70" fill="white" stroke="black" stroke-width="2"/>
+  <text x="492" y="235" font-size="14" font-weight="bold">POWER SWITCH</text>
+  <text x="498" y="258" font-size="12">Anti-spark / loop key</text>
+
+  <!-- Bus -->
+  <rect x="680" y="180" width="40" height="260" fill="#dddddd" stroke="black" stroke-width="2"/>
+  <text x="690" y="170" font-size="13" font-weight="bold">DC BUS</text>
+  <text x="684" y="290" font-size="12" transform="rotate(-90 695 310)"></text>
+
+  <!-- ESC Front -->
+  <rect x="790" y="130" width="180" height="100" fill="#dceeff" stroke="black" stroke-width="2"/>
+  <text x="815" y="165" font-size="17" font-weight="bold">ESC — FRONT</text>
+  <text x="820" y="190" font-size="13">Model: TBD</text>
+  <text x="820" y="210" font-size="13">Sensored (ASSUMED)</text>
+
+  <!-- ESC Rear -->
+  <rect x="790" y="330" width="180" height="100" fill="#dceeff" stroke="black" stroke-width="2"/>
+  <text x="820" y="365" font-size="17" font-weight="bold">ESC — REAR</text>
+  <text x="820" y="390" font-size="13">Model: TBD</text>
+  <text x="820" y="410" font-size="13">Sensored (ASSUMED)</text>
+
+  <!-- Motors -->
+  <circle cx="1080" cy="180" r="52" fill="#ffe2e2" stroke="black" stroke-width="2"/>
+  <text x="1080" y="172" font-size="12" font-weight="bold" text-anchor="middle">FRONT MOTOR</text>
+  <text x="1080" y="194" font-size="11" text-anchor="middle">Hubless BLDC</text>
+  <circle cx="1080" cy="380" r="52" fill="#ffe2e2" stroke="black" stroke-width="2"/>
+  <text x="1080" y="372" font-size="12" font-weight="bold" text-anchor="middle">REAR MOTOR</text>
+  <text x="1080" y="394" font-size="11" text-anchor="middle">Hubless BLDC</text>
+
+  <!-- Main power lines -->
+  <line x1="240" y1="230" x2="300" y2="230" stroke="#cc0000" stroke-width="4"/>
+  <line x1="240" y1="255" x2="300" y2="255" stroke="black" stroke-width="4"/>
+  <line x1="420" y1="230" x2="480" y2="230" stroke="#cc0000" stroke-width="4"/>
+  <line x1="420" y1="255" x2="480" y2="255" stroke="black" stroke-width="4"/>
+  <line x1="620" y1="230" x2="680" y2="230" stroke="#cc0000" stroke-width="4"/>
+  <line x1="620" y1="255" x2="680" y2="255" stroke="black" stroke-width="4"/>
+  <line x1="720" y1="200" x2="790" y2="200" stroke="#cc0000" stroke-width="3"/>
+  <line x1="720" y1="220" x2="790" y2="220" stroke="black" stroke-width="3"/>
+  <line x1="720" y1="380" x2="790" y2="380" stroke="#cc0000" stroke-width="3"/>
+  <line x1="720" y1="400" x2="790" y2="400" stroke="black" stroke-width="3"/>
+  <text x="250" y="215" font-size="12" fill="#cc0000">+ DC</text>
+  <text x="250" y="278" font-size="12">− DC (GND)</text>
+
+  <!-- Phase wires -->
+  <line x1="970" y1="160" x2="1028" y2="165" stroke="#e6a817" stroke-width="3"/>
+  <line x1="970" y1="180" x2="1028" y2="180" stroke="#1a9e1a" stroke-width="3"/>
+  <line x1="970" y1="200" x2="1028" y2="195" stroke="#2266cc" stroke-width="3"/>
+  <line x1="970" y1="360" x2="1028" y2="365" stroke="#e6a817" stroke-width="3"/>
+  <line x1="970" y1="380" x2="1028" y2="380" stroke="#1a9e1a" stroke-width="3"/>
+  <line x1="970" y1="400" x2="1028" y2="395" stroke="#2266cc" stroke-width="3"/>
+  <text x="880" y="118" font-size="12">U / V / W PHASES →</text>
+  <text x="880" y="318" font-size="12">U / V / W PHASES →</text>
+
+  <!-- Throttle -->
+  <rect x="790" y="540" width="180" height="90" fill="#e6ffe6" stroke="black" stroke-width="2"/>
+  <text x="820" y="572" font-size="16" font-weight="bold">THROTTLE</text>
+  <text x="808" y="595" font-size="13">Hall type (ASSUMED)</text>
+  <text x="815" y="615" font-size="13">+5V · GND · SIGNAL</text>
+  <line x1="880" y1="540" x2="880" y2="430" stroke="#7a3ea3" stroke-width="3" stroke-dasharray="8 4"/>
+  <line x1="880" y1="540" x2="880" y2="230" stroke="#7a3ea3" stroke-width="3" stroke-dasharray="8 4" opacity="0.45"/>
+  <text x="890" y="500" font-size="12" fill="#7a3ea3">Throttle signal split to both ESCs</text>
+  <text x="890" y="520" font-size="12" fill="#7a3ea3">(dual-drive config: ASSUMED)</text>
+
+  <!-- Hall sensor note -->
+  <rect x="40" y="540" width="580" height="130" fill="white" stroke="black" stroke-width="1.5"/>
+  <text x="60" y="568" font-size="15" font-weight="bold">NOTES</text>
+  <text x="60" y="592" font-size="13">1. Each motor: 3 phase wires (U/V/W) + Hall bundle (+5V, GND, Ha, Hb, Hc) to its own ESC.</text>
+  <text x="60" y="614" font-size="13">2. Phase / Hall wire colours vary by manufacturer — verify pinout, do not rely on colour alone.</text>
+  <text x="60" y="636" font-size="13">3. E-brake cut-off switch (if fitted) wires to the brake input of BOTH ESCs — not yet confirmed.</text>
+  <text x="60" y="658" font-size="13">4. Disconnect battery before any wiring change. Diagram by Muse for Z. Aebersold, 2026-10-20.</text>
+
+  <!-- Hall lines -->
+  <line x1="970" y1="215" x2="1035" y2="225" stroke="gray" stroke-width="2" stroke-dasharray="5 3"/>
+  <line x1="970" y1="415" x2="1035" y2="425" stroke="gray" stroke-width="2" stroke-dasharray="5 3"/>
+  <text x="975" y="255" font-size="11" fill="gray">HALL</text>
+  <text x="975" y="455" font-size="11" fill="gray">HALL</text>
+
+  <!-- Title block -->
+  <rect x="740" y="720" width="420" height="100" fill="white" stroke="black" stroke-width="2"/>
+  <line x1="740" y1="755" x2="1160" y2="755" stroke="black"/>
+  <line x1="740" y1="788" x2="1160" y2="788" stroke="black"/>
+  <line x1="1030" y1="720" x2="1030" y2="820" stroke="black"/>
+  <text x="755" y="745" font-size="13">PROJECT: SATOR V1 — HUBLESS BLDC</text>
+  <text x="755" y="778" font-size="13">DRAWING: DWG-E-001  WIRING</text>
+  <text x="1045" y="778" font-size="13">REV: A (DRAFT)</text>
+  <text x="755" y="810" font-size="13">DATE: 2026-10-20</text>
+  <text x="1045" y="810" font-size="13">SCALE: NTS</text>
+</svg>

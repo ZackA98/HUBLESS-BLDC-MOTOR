@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you reference this design, please cite it as below."
+authors:
+  - family-names: "Aebersold"
+    given-names: "Zackary"
+title: "SATOR V1 — Hubless BLDC Electric Scooter"
+repository-code: "https://github.com/ZackA98/HUBLESS-BLDC-MOTOR"
+license: MIT
+abstract: "Design documentation and engineering showcase for a stand-up electric scooter with hubless BLDC wheel motors (front and rear), designed in Onshape. Includes verified BOM, wiring and static-load drawings, calculations, and test plans."
+keywords:
+  - hubless motor
+  - BLDC
+  - electric scooter
+  - Onshape
+  - mechanical engineering

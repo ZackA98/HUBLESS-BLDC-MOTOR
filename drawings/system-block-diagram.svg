@@ -1,0 +1,122 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" font-family="Arial, Helvetica, sans-serif">
+  <rect x="0" y="0" width="1200" height="820" fill="#ffffff"/>
+  <rect x="10" y="10" width="1180" height="800" fill="none" stroke="#000" stroke-width="2"/>
+
+  <text x="600" y="48" text-anchor="middle" font-size="26" font-weight="bold">SATOR V1 — SYSTEM BLOCK DIAGRAM</text>
+  <text x="600" y="76" text-anchor="middle" font-size="16" fill="#b00000" font-weight="bold">PROPOSED ARCHITECTURE — NOT AS-BUILT · ELECTRICAL VALUES ASSUMED (SEE DWG-E-001)</text>
+
+  <!-- Power chain -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="40" y="120" width="180" height="70" fill="#eef4ff" stroke="#000" stroke-width="1.5"/>
+    <text x="130" y="150" font-weight="bold">BATTERY PACK</text>
+    <text x="130" y="172" font-size="13">48 V nom. (ASSUMED, 13S)</text>
+
+    <rect x="280" y="120" width="130" height="70" fill="#eef4ff" stroke="#000" stroke-width="1.5"/>
+    <text x="345" y="150" font-weight="bold">BMS</text>
+    <text x="345" y="172" font-size="13">protect + balance</text>
+
+    <rect x="470" y="120" width="130" height="70" fill="#eef4ff" stroke="#000" stroke-width="1.5"/>
+    <text x="535" y="150" font-weight="bold">MAIN FUSE</text>
+    <text x="535" y="172" font-size="13">40 A (ASSUMED)</text>
+
+    <rect x="660" y="120" width="180" height="70" fill="#eef4ff" stroke="#000" stroke-width="1.5"/>
+    <text x="750" y="150" font-weight="bold">POWER SWITCH</text>
+    <text x="750" y="172" font-size="13">anti-spark / loop key</text>
+
+    <rect x="900" y="120" width="150" height="70" fill="#eef4ff" stroke="#000" stroke-width="1.5"/>
+    <text x="975" y="150" font-weight="bold">DC BUS</text>
+    <text x="975" y="172" font-size="13">split to 2 ESCs</text>
+  </g>
+  <g stroke="#000" stroke-width="2">
+    <line x1="220" y1="155" x2="280" y2="155"/>
+    <line x1="410" y1="155" x2="470" y2="155"/>
+    <line x1="600" y1="155" x2="660" y2="155"/>
+    <line x1="840" y1="155" x2="900" y2="155"/>
+    <line x1="975" y1="190" x2="975" y2="250"/>
+    <line x1="900" y1="285" x2="950" y2="285"/>
+  </g>
+
+  <!-- ESCs and motors -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="700" y="250" width="200" height="70" fill="#fff7e6" stroke="#000" stroke-width="1.5"/>
+    <text x="800" y="280" font-weight="bold">ESC — FRONT</text>
+    <text x="800" y="302" font-size="13">sensored (ASSUMED), TBD</text>
+
+    <rect x="950" y="250" width="200" height="70" fill="#fff7e6" stroke="#000" stroke-width="1.5"/>
+    <text x="1050" y="280" font-weight="bold">ESC — REAR</text>
+    <text x="1050" y="302" font-size="13">sensored (ASSUMED), TBD</text>
+
+    <rect x="700" y="400" width="200" height="80" fill="#eafbea" stroke="#000" stroke-width="1.5"/>
+    <text x="800" y="432" font-weight="bold">MOTOR — FRONT</text>
+    <text x="800" y="454" font-size="13">hubless BLDC wheel</text>
+
+    <rect x="950" y="400" width="200" height="80" fill="#eafbea" stroke="#000" stroke-width="1.5"/>
+    <text x="1050" y="432" font-weight="bold">MOTOR — REAR</text>
+    <text x="1050" y="454" font-size="13">hubless BLDC wheel</text>
+  </g>
+  <g stroke="#000" stroke-width="2">
+    <line x1="800" y1="320" x2="800" y2="400"/>
+    <line x1="1050" y1="320" x2="1050" y2="400"/>
+  </g>
+  <text x="788" y="393" text-anchor="end" font-size="13">U/V/W + Hall (5-wire)</text>
+  <text x="1038" y="393" text-anchor="end" font-size="13">U/V/W + Hall (5-wire)</text>
+
+  <!-- Control boxes -->
+  <g font-size="15" text-anchor="middle">
+    <rect x="60" y="250" width="200" height="70" fill="#fdeef2" stroke="#000" stroke-width="1.5"/>
+    <text x="160" y="280" font-weight="bold">THROTTLE</text>
+    <text x="160" y="302" font-size="13">hall type (ASSUMED)</text>
+
+    <rect x="340" y="250" width="200" height="70" fill="#f3efff" stroke="#000" stroke-width="1.5"/>
+    <text x="440" y="280" font-weight="bold">CHARGER</text>
+    <text x="440" y="302" font-size="13">via charge port → BMS</text>
+
+    <rect x="60" y="400" width="200" height="70" fill="#fdeef2" stroke="#000" stroke-width="1.5"/>
+    <text x="160" y="430" font-weight="bold">E-BRAKE LEVER</text>
+    <text x="160" y="452" font-size="13">cut-off switch</text>
+
+    <rect x="340" y="400" width="200" height="70" fill="#f3efff" stroke="#000" stroke-width="1.5"/>
+    <text x="440" y="430" font-weight="bold">DISPLAY (OPT.)</text>
+    <text x="440" y="452" font-size="13">UART to ESC-Front</text>
+  </g>
+
+  <!-- Signal routing: channel between the ESC row and motor row -->
+  <g stroke="#000" stroke-width="1.5" stroke-dasharray="6 4" fill="none">
+    <!-- charger up to BMS -->
+    <path d="M 440 250 L 440 215 L 345 215 L 345 190"/>
+    <!-- throttle to ESC-Front (bottom edge) -->
+    <path d="M 260 278 L 318 278 L 318 340 L 868 340 L 868 320"/>
+    <!-- throttle to ESC-Rear (bottom edge) -->
+    <path d="M 260 296 L 330 296 L 330 352 L 1088 352 L 1088 320"/>
+    <!-- e-brake to ESC-Front (bottom edge) -->
+    <path d="M 260 424 L 306 424 L 306 364 L 884 364 L 884 320"/>
+    <!-- e-brake to ESC-Rear (bottom edge) -->
+    <path d="M 260 448 L 294 448 L 294 376 L 1072 376 L 1072 320"/>
+    <!-- display to ESC-Front (left edge) -->
+    <path d="M 540 436 L 648 436 L 648 292 L 700 292"/>
+  </g>
+  <text x="345" y="334" font-size="13">throttle signal split to both ESCs (dual drive ASSUMED)</text>
+  <text x="345" y="392" font-size="13">e-brake cut-off to both ESCs</text>
+
+  <!-- Notes -->
+  <g font-size="14">
+    <text x="40" y="540" font-weight="bold">NOTES</text>
+    <text x="40" y="566">1. Power path: solid lines. Control/signal: dashed lines. Pinouts and wire schedule: docs/electrical-pinout.md.</text>
+    <text x="40" y="590">2. All electrical values are ASSUMED placeholders pending part selection — see docs/decisions/ADR-003.</text>
+    <text x="40" y="614">3. E-brake cut-off must reach BOTH ESCs; verify polarity against the ESC manual before power-up.</text>
+    <text x="40" y="638">4. Disconnect the loop key before any wiring work. See docs/safety.md.</text>
+  </g>
+
+  <!-- Title block -->
+  <g font-size="14">
+    <rect x="700" y="700" width="460" height="90" fill="none" stroke="#000" stroke-width="1.5"/>
+    <line x1="700" y1="730" x2="1160" y2="730" stroke="#000"/>
+    <line x1="700" y1="760" x2="1160" y2="760" stroke="#000"/>
+    <line x1="1010" y1="700" x2="1010" y2="790" stroke="#000"/>
+    <text x="710" y="722" font-weight="bold">DWG-E-002 — SYSTEM BLOCK DIAGRAM</text>
+    <text x="710" y="752">Project: SATOR V1 Hubless BLDC</text>
+    <text x="1020" y="752">Rev: A (DRAFT)</text>
+    <text x="710" y="782">Drawn: 2026-10-21</text>
+    <text x="1020" y="782">Scale: N/A</text>
+  </g>
+</svg>

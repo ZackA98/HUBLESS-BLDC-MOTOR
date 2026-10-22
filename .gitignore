@@ -1,0 +1,15 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.tmp
+*~
+.vscode/
+
+# CAD working files (keep published STEP/STL exports; ignore local scratch)
+*.bak
+*.lock
+~$*
+
+# Large binaries are published via GitHub Releases, not git
+*.zip
+*.7z
